@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coffee List</title>
+    </head>
+
+    <body>
+        <h1>My Coffee List</h1>
+        {% for coffee in coffee_list %}
+            <p>{{ coffee.name }}, {{ coffee.price }}</p>
+        {% endfor %}
+
+        <form method="POST">{% csrf_token %}
+            {{ coffee_form.as_p }}
+            <button type = 'submit'>Save</button>
+        </form>
+    </body>
+</html>
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Python django example</title>
+    </head>
+
+    <body>
+        <h1>My name: {{my_name}}</h1>
+        <p>수강중인 코스: {{course}}</p>
+         <p>{{ my_name | upper}}</p> 
+        
+        {% for i in my_list %}
+            {% if i|divisibleby:"2" %}
+                <p>{{ i }}</p>
+            {% endif %}
+        {% endfor %}
+        
+
+
+    </body>
+    </html>
+-->
