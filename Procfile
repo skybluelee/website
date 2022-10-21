@@ -1,1 +1,1 @@
-web: gunicorn monthlypro.wsgi --log-file -
+web: gunicorn webproj.wsgi --log-file -
